@@ -1,9 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
-import { getCountries } from "../services/api";
 import { useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+
+import { getCountries } from "../services/api";
 import { useCountries } from "../context/CountriesContext";
 
-function useGetCountries() {
+export function useGetCountries() {
     const { setCountries, selectedRegion } = useCountries();
     const query = useQuery({
         queryKey: ["countries", selectedRegion],
@@ -19,6 +20,5 @@ function useGetCountries() {
     return query;
 }
 
-export default useGetCountries
 
 

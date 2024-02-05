@@ -3,7 +3,12 @@ import { useOutsideClick } from "../hooks/useOutsideClick";
 
 const SelectContext = createContext();
 
-function Select({ children, onSetValue, title, sideHandler }) {
+function Select({
+  children,
+  onSetValue,
+  sideHandler,
+  title = "Select an option",
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("");
   const dropdownRef = useOutsideClick(() => setIsOpen(false));

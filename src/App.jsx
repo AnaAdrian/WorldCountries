@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-import CountryList from "./components/CountryList";
 import Header from "./ui/Header";
+import CountryList from "./components/CountryList";
 import { CountriesProvider } from "./context/CountriesContext";
 
 const queryClient = new QueryClient({});

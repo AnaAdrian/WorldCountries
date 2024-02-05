@@ -1,8 +1,8 @@
 import CountryItem from "./CountryItem";
-import Loader from "../ui/Loader";
-import useGetCountries from "../hooks/useGetCountries";
 import Error from "../ui/Error";
+import Loader from "../ui/Loader";
 import NoContent from "../ui/NoContent";
+import { useGetCountries } from "../hooks/useGetCountries";
 import { useCountries } from "../context/CountriesContext";
 
 function CountryList() {

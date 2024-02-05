@@ -2,7 +2,7 @@ import { FaMapMarkedAlt } from "react-icons/fa";
 
 function CountryItem({ country }) {
   const countryName = country.name.common;
-  // Construct Wikipedia and Google Maps URLs
+
   const wikipediaUrl = `https://en.wikipedia.org/wiki/${countryName}`;
   const mapsSearchUrl = `https://www.google.com/maps/place/${countryName}`;
 
@@ -18,12 +18,7 @@ function CountryItem({ country }) {
         </div>
         <div className="p-8 flex flex-col justify-between">
           <div>
-            <a
-              href={wikipediaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
+            <a href={wikipediaUrl} className="hover:underline">
               <h3 className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
                 {country?.name?.common}
               </h3>
@@ -39,8 +34,6 @@ function CountryItem({ country }) {
           </div>
           <a
             href={mapsSearchUrl}
-            target="_blank"
-            rel="noopener noreferrer"
             className="flex items-center mt-4 text-blue-500 hover:text-blue-600"
           >
             <FaMapMarkedAlt className="mr-2" />
