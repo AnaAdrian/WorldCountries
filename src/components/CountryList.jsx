@@ -37,7 +37,7 @@ function CountryList() {
   }
 
   return (
-    <div className="md:mt-28 mt-48 max-w-md mx-auto md:max-w-2xl">
+    <div className="md:mt-28 mt-48 px-2 md:px-0 max-w-md mx-auto md:max-w-2xl">
       {displayedCountries?.map((country) => (
         <CountryItem key={country.cca3} country={country} />
       ))}
